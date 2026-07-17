@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORSA DÜNYAMA HOŞ GELDİN</title>
+</head>
+
+<body>
+    <div style="
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+">
+        <button id="yenileBtn">🔄 Verileri Yenile</button>
+        <button id="temaBtn">🌙 Tema</button>
+        <button id="ekleBtn">➕ Hisse Ekle</button>
+    </div>
+    <script>
+        const button = document.getElementById('yenileBtn')
+        const url = "https://tr.investing.com"
+    </script>
+
+
+</body>
+
+<style>
+    button {
+        width: 170px;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        color: blue yellow;
+        animation: 3s linear infinite;
+        transition: transform .3s;
+
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        color: yellow;
+        background-color: #8000FF;
+
+    }
+
+    @keyframes blockquote {
+
+        0% {
+            background: #FFD700;
+            color: blue;
+            box-shadow: 0 0 10px #FFD700,
+                0 0 20px #FFD700,
+                0 0 40px #FFD700;
+        }
+
+        33% {
+            background: #001F54;
+            color: yellow;
+            box-shadow: 0 0 10px #001F54,
+                0 0 20px #001F54,
+                0 0 40px #001F54;
+        }
+
+        66% {
+            background: #8000FF;
+            color: yellow;
+            box-shadow: 0 0 10px #8000FF,
+                0 0 20px #8000FF,
+                0 0 40px #8000FF;
+        }
+
+        100% {
+            background: #FFD700;
+            color: blue;
+            box-shadow: 0 0 10px #FFD700,
+                0 0 20px #FFD700,
+                0 0 40px #FFD700;
+        }
+
+    }
+</style>
+<div>
+
+</div>
+
+</html>

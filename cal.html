@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRATİK ZEKA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="PRATİK ZEKA">
+        <h1>PRATİK ZEKA</h1>
+
+        <input type="number" id="sayi1" placeholder="0">
+        <input type="number" id="sayi2" placeholder="0">
+        <br />
+        <input type="text" id="sonuc" />
+        <br />
+        <select name="cars" id="cars">
+  <option value="+">Toplama</option>
+  <option value="-">Çıkarma</option>
+  <option value="*">Çarpma</option>
+  <option value="/">Bölme</option>
+</select>
+        <div class="tuslar">
+            <button class="islem-tusu" onclick="temizle()">C</button>
+            <button class="islem-tusu" onclick="sil()">&&</button>
+            <button class="islem-tusu" onclick="hesapla('+')">+</button>
+            <button class="islem-tusu" onclick="hesapla('-')">-</button>
+            <button class="islem-tusu" onclick="hesapla('/')">/</button>
+            <button class="islem-tusu" onclick="hesapla('*')">*</button>
+        </div>
+
+        <style>
+            .tuslar{
+                margin-top: 10px;
+            }
+            .islem-tusu{
+                background-color: red;
+                border: none;
+                width: 50px;
+                height: 20px;
+                color: white;
+            }
+        </style>
+
+        <script>
+            /*
+            şimdi eğer kullanıcı rakam yerine harf girerse patlar.
+            harfleri kabul etmiyor şimdi.
+            şimdi buton yerine ayrıca combobox ile yapmayı dene
+            combobox nedir ?
+             öğrendim işlemci kutusu işlemci kutusu mu bunun üzerinden gidebilirsin. sonrasında sana vue js göstereceğim. bu işlerin piri
+             iyi ilerliyorsun devam...
+             tahnkyou kral sayende
+             est.
+             bunu bu haliyle kaydetmek istiyorum nasıl yapacağım 
+             github için mi evet
+             hesap oluştur
+             bişey engelliyor orada resim çıkması lazım
+            */
+            
+            let sayi1 = 0
+            let sayi2 = 0
+
+            function setResult(val) {
+                document.getElementById("sonuc").value = val
+            }
+
+            function setValue() {
+                sayi1 = Number(document.getElementById("sayi1").value)
+                sayi2 = Number(document.getElementById("sayi2").value)
+            }
+
+            function temizle() {
+                setValue()
+
+                document.getElementById("sayi1").value = "";
+                document.getElementById("sayi2").value = "";
+                document.getElementById("sonuc").value = "";
+            }
+
+
+            function sil() {
+                setValue()
+                document.getElementById("sayi1").value = "";
+                document.getElementById("sayi2").value = "";
+                document.getElementById("sonuc").value = "";
+            }
+
+
+            function hesapla(islem) {
+                setValue()
+                let sonuc = 0
+                if (islem == "+") {
+                    sonuc = sayi1 + sayi2
+
+                } else if (islem == "-") {
+                    sonuc = sayi1 - sayi2
+                } else if (islem == "/") {
+                    sonuc = sayi1 / sayi2
+                } else if (islem == "*") {
+                    sonuc = sayi1 * sayi2
+                }
+                setResult(sonuc)
+            }
+        </script>
+</body>
+
+</html>
